@@ -1,0 +1,162 @@
+import json
+filename='user_settings.txt'                 #"""Create newfile with his path"""
+myfile=open(filename,mode='w',encoding='UTF-8')  #Open Created File with write mode
+
+
+player1={
+    "PlayerName":"Razmik.Avetisyan",   #------------------Create Plaer1 with his settings in one dict
+    "Score":345,
+    "Awards":["Honor","NEW-YORK","BEST-SOLDER"]
+    }
+player2={                             #--------------------#Create Plaer1 with his settings in one dict
+    "PlayerName":"Poxos.Poxosyan",
+    "Score":250,
+    "Awards":['Best Solder',"Honor"]
+    }
+
+myplayers=[]                         #Create empty array
+myplayers.append(player1)            #Add player 1 dict in this array
+myplayers.append(player2)            #Add player 2 dict in this array too
+
+
+#--------SAVE BY JSON---------
+json.dump(myplayers,myfile)    #------Save All in Json file
+myfile.close()                 #------Close File
+
+
+#------LOAD BY JSON-----------
+myfile=open(filename,mode='r',encoding='UTF-8')  #-------open created json file with 'r' mode
+json_data=json.load(myfile)                      #-------load opened json file
+for user in json_data:                           #prin json file data in for loop
+    print("Player Name Is :>"+str(user['PlayerName'])) #-print player name
+    print('Score is:>'+str(user['Score']))       #print players score
+    print('Award is >'+str(user['Awards'][0]))   #print players awards
+    print('---------------------------n\n')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
