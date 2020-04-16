@@ -1,0 +1,13 @@
+while True:
+ print('Who Are you')
+ name=input()
+ if name !='Joe':
+        continue
+ else:
+  print('Hello Joe How are you?')
+ type = input()
+ if type !='Thank you fine':
+      continue
+ else:
+     print ('accses grated')
+     break
