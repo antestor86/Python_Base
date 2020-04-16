@@ -1,0 +1,18 @@
+list1=[]
+def makelist(value):
+    if value!=None:
+        return list1.append(value)
+
+
+
+print('For Exit press e')
+while True:
+
+    make_value=input('Set Value: ')
+    value=makelist(make_value)
+    if make_value =='e':
+        del list1[-1]
+        break
+print(list1)
+print(list1.sort())
+print(list1)
