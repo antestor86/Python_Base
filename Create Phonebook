@@ -1,0 +1,17 @@
+def create_dict(**kwargs):
+    phonebook={}
+    while True:
+       name=input("Set Name:")
+       number=input("Set Number:")
+       phonebook.update({name:number})
+       if name=='exit':
+           phonebook.pop('exit')
+
+
+           break
+    return print(phonebook)
+
+
+
+new_dict=create_dict()
+print(new_dict)
