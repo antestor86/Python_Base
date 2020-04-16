@@ -1,0 +1,24 @@
+import math
+def direction(x1,y1,x2,y2):
+
+    result=0
+    if x1>x2:
+        if y1>y2:
+          result= math.pow((x1-x2),2)+math.pow((y1-y2),2)
+          return  math.sqrt(result)
+        elif y2>y1:
+            result = math.pow((x1 - x2), 2) + math.pow((y2 - y1),2)
+            return math.sqrt(result)
+    elif x2>x1:
+        if y1>y2:
+          result= math.pow((x2-x1),2)+math.pow((y1-y2),2)
+          return  math.sqrt(result)
+        elif y2>y1:
+            result = math.pow((x2 - x1), 2) + math.pow((y2 - y1),2)
+            return math.sqrt(result)
+
+p1=direction(1,5,18,20)
+print(p1)
+p2=direction(15,25,1,10)
+print(p2)
+
