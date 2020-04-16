@@ -1,0 +1,9 @@
+def reverce_changer(value):
+    if value==''.join(reversed(value)):
+        return True
+    else:
+        return False
+
+name=input("input words:")
+response=reverce_changer(name)
+print(response)
