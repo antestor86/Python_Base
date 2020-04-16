@@ -1,0 +1,15 @@
+"""Ամենամեծ և Ամենափոքր էլեմենտները փոխել տեղերով """
+
+my_list=[-123,45,789,-65,452,-475]
+for_loop=len(my_list)
+minimum=min(my_list)
+maximum=max(my_list)
+print(minimum)
+print(maximum)
+for i in range (for_loop):
+    if my_list[i]==int(minimum):
+        my_list[i]=maximum
+    elif my_list[i]==int(maximum):
+        my_list[i]=minimum
+
+print(my_list)
