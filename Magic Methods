@@ -1,0 +1,13 @@
+class Complex:
+        def __init__(self,real,imiginary):
+                self.real=real
+                self.imiginary=imiginary
+
+        def __repr__(self):
+               return 'Complex Values {} {}'.format(self.real,self.imiginary)
+        def __str__(self):
+                return '{}   {}'.format(self.real,self.imiginary)
+
+x=Complex('John',3.5)
+print(repr(x))
+print(x)
