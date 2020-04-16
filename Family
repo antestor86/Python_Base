@@ -1,0 +1,10 @@
+my_family = ['mother','father','sister']
+my_family_height = [[my_family[0],170],
+					[my_family[1],158],
+					[my_family[2],160]
+					]
+print(f'{my_family[1]}`s height is {my_family_height[1][1]}')
+
+the_summ = my_family_height[0][1] + my_family_height[1][1] + my_family_height[2][1]
+
+print(f'The Summ of Fmaily Heights is {the_summ}')
