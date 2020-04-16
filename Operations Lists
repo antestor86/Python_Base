@@ -1,0 +1,12 @@
+list1=['asa','123456','Razmik']
+try:
+   value1=input('Enter Index:  ')
+   n=int(value1)
+   if n >= 0:
+       if n >=len(list1):
+           raise IndexError('Սխալ Ինդեքս')
+       print(list1[n])
+except IndexError:
+    print('Սխալ Ինդեքս')
+except ValueError:
+    print('Սխալ Արժեք')
