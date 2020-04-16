@@ -1,0 +1,23 @@
+class Customer:
+    def __init__(self,name,surname,account,day):
+        self.name=name
+        self.surname=surname
+        self.account=account
+        self.day=day
+        self.mounth_days=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+    def payment(self):
+        self.payday=payday
+        if not self.day in self.mounth_days:
+            return False
+        else:
+            return True
+
+class Payment(Customer):
+    def  final_balance(self,cashe):
+        self.cashe=cashe
+        return self.account- self.balance
+
+
+balance=25000
+pay=2000
+a=Customer('John','Jonsom',balance,15)
