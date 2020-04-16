@@ -1,0 +1,8 @@
+def f3(l):
+	def get_mul(x):
+		if isinstance(x,int):
+			return x*2
+	return [get_mul(i) for i in l if isinstance(i,int) ]
+
+l=[5,'22',10]
+print(f3(l))
