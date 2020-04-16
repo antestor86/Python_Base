@@ -1,0 +1,34 @@
+def add_links(links):
+    original_address=input('Select url:')
+    short_name=None
+    while not short_name or short_name in links:
+        short_name=input('Select short name:')
+        if short_name in links:
+            print('This Name already exsists:')
+    links[short_name]=original_address
+
+def get_links(links):
+    name=input('Input The Link Name: ')
+    url=links.get(name)
+    print(url)
+
+    if url in links:
+        print('The is Exist')
+
+def main():
+    links={}
+    print('1.Set Link')
+    print('2.Get Link')
+    print('3.Exit')
+    while True:
+       change=input('>  ')
+
+       if change=='1':
+           add_links(links)
+       elif change=='2':
+           get_links(links)
+       elif change=='3':
+           break
+
+if __name__=='__main__':
+     main()
