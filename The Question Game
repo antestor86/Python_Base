@@ -1,0 +1,55 @@
+#Question Game
+operation = True
+answer1=0
+answer2=0
+answer3=0
+answer4=0
+answer5=0
+answer6=0
+question1 = input('What will happen when performing this operation? A+B:')
+if question1 == 'AB':
+    operation == True
+    if operation == True:
+        answer1 = 1
+    else:
+        answer1 = 0
+question2 = input('What will happen when performing this operation A+str(2)?:')
+if question2 == 'A2':
+    operation == True
+    if operation == True:
+        answer2 = 1
+    else:
+        answer2 = 0
+question3 = input('What Will be happens in this operation? 5>10 and 10<20: ')
+if question3 == 'False':
+    operation == True
+    if operation == True:
+        answer3 = 1
+    else:
+        answer3 = 0
+question4=input('What will be happens in this operation?10 < 5 or 50 > 20 :')
+if  question4=='True':
+    operation==True
+    if operation==True:
+        answer4=1
+    else:
+        answer4=0
+question5=input('What will be happens in this operation? a=bool(1):')
+if question5=='True':
+   operation==True
+   if operation==True:
+    answer5 = 1
+   else:
+        answer5 = 0
+question6=input('What will be happens in this operation? a=bool(0):')
+if question6 =='False':
+   operation==True
+   if operation==True:
+         answer6 = 1
+   else:
+         answer6=0
+
+result= (answer1 + answer2 + answer3+answer4+answer5+answer6)
+print('The correct answers are: '+ str(result))
+incorrect=6-result
+print('The incorrect answers are'+ str(incorrect))
