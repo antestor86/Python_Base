@@ -1,0 +1,28 @@
+result=0
+def addition(var1,var2):
+
+    result=var1+var2
+def substract(var1,var2):
+      return   var1-var2
+def multiple(var1,var2):
+     return var1*var2
+def divide(var1,var2):
+    return var1/var2
+value1=input('Նշեք առաջին թիվը   ')
+value2=input('Նշեք Երկրորդ թիվը  ')
+v1=int(value1)
+v2=int(value2)
+operation=input('Նշեք գործողությունը՝  +  -  *  /  ')
+if operation=='+':
+    result=addition(v1,v2)
+elif operation=='-':
+    result=substract(v1,v2)
+elif operation=='*':
+    result=multiple(v1,v2)
+elif operation=='/':
+    if v2==0:
+     try:
+        result=divide(v1,v2)
+        raise ZeroDivisionError('Թիվը չի կարելի բաժանել 0-ի')
+     except ZeroDivisionError as a:
+         print('Սխալ Գոծողություն ',a)
