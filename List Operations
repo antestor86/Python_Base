@@ -1,0 +1,13 @@
+my_list=[1,2,3,4,5,6,7]
+print(len(my_list))
+
+
+"""Դուրս Բերել Զույգ Ինդեքսով Ելեմենտները"""
+print(my_list[0:7:2])
+
+
+"""Դուրս Բերել Զույք Արժեքով էլեմենտները"""
+list_value=len(my_list)
+for i in range (list_value):
+    if my_list[i]%2==0:
+        print(my_list[i])
