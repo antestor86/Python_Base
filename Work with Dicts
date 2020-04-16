@@ -1,0 +1,53 @@
+phonebook={
+    'John':'0092-200-597',
+    'Abraham':'5091-7400-947',
+    'Arthur':'1099-450-297',
+    'Other':'000-00000',
+}
+print(len(phonebook))
+
+"""Ստուգենք Value ի առկայությունը"""
+try:
+    print('Mary:',phonebook['Mary']) #առկա չէ
+    print('John:',phonebook['John'])#առկա է
+except KeyError as e:
+    print("no entry for ",*e.args)# e excpet ի անվանաւոմ  *args արգումենտներ
+
+phonebook['Mary']='0800-500-140'
+print(phonebook)
+
+"""Ստուգենք Օգտագործողի առկայություն բառանաում ցիկլի միջոցով"""
+for person in ('Ara','Em','Hovik','Mary','John'):
+    if person in phonebook:
+        print(person,'is in phonebook')
+    else:
+        print('no entry found',person)
+
+"""Ստեղծենք ոչ լիովին կրկնօրինակը"""
+phonebook_copy=phonebook.copy()
+print(phonebook)
+print(phonebook_copy)
+phonebook_copy.update({'User':'888-8888-888'})
+print(phonebook)
+print(phonebook_copy)
+"""լրիվ մասքրում ենք կրկնօրինակը"""
+phonebook_copy.clear()
+
+print(phonebook)
+print(phonebook_copy)
+
+"""Ստեղծում ենք նոր բառարան ըստ նշված range ի և բոլորի վրա դնում ենք նույն պարամետրը"""
+number_dict=dict.fromkeys(range(3),42)
+print(number_dict)
+"""Նոր ստեղված բառարանից վերցնում ենք արժեք ըստ key-ի"""
+for key in range(5):
+    print('{}'.format(key),number_dict.get(key,0))#քանի որ մեր նոր բառարանը կազմված է 3 key-երից ապա վերջին 2 պարամետրերը կստանան 0 արժեքը
+
+"""դուրս բերենք բոլոր պարամետրերը իրենց արժեքբերով"""
+print('ITEMS',phonebook.items())
+"""Դուրս բերենք միայն բոլոր key երը"""
+print(phonebook.keys())
+
+print(phonebook.values())
+number=phonebook.pop('John')
+print(phonebook)
