@@ -1,0 +1,7 @@
+"""Դուրս Բերել այն Էլեմենտնռրը,որոնք մեծ են իրենց նախորդ էլէմենտից"""
+
+my_list=[123,45,789,65,452,475]
+for_loop=len(my_list)
+for i in range (for_loop):
+    if my_list[i]>my_list[i-1]:
+        print(my_list[i])
