@@ -1,0 +1,13 @@
+file=open("E:\password.txt",mode='w',encoding="UTF-8")
+
+#reading_file=file.write()
+print('for exit type exit')
+while True:
+    text=input('Select Text:>')
+    if text != 'exit':
+        file.write(text)
+    else:
+        file.close()
+        break
+file=open("E:\password.txt",mode='r',encoding="UTF-8")
+print(file.read())
