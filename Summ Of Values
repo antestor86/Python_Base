@@ -1,0 +1,28 @@
+"""Задача 16
+Сумма цифр степени
+2**15 = 32768, сумма цифр этого числа равна 3 + 2 + 7 + 6 + 8 = 26.
+
+Какова сумма цифр числа 2**1000"""
+
+
+def degre(x,y):
+  result=0
+  for i in range(y+1):
+     result=x**i
+  return result
+
+#Setting Values
+value=int(input("SET VALUE>"))
+degress=int(input("SET DEGREE>"))
+#Change Fumction with changed values
+a=degre(value,degress)
+#convert a value tro string
+text=str(a)
+#create list from string text
+list1=list(text)
+#create new list for convert to integer list1 indexes
+list2=[]
+result=0
+#create integer list with name list2 from list1
+for digit in list1:
+  list2.append(int(digit))
