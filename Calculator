@@ -1,0 +1,23 @@
+value1=input('Նշեք առաջին թիվը։ ')
+value2=input('Նշեք Երկրորդ թիվը։ ')
+operation=input('Նշեք Գործողությունը։+ - * /')
+result=0
+a1=int(value1)
+a2=int(value2)
+try:
+    if operation=='+':
+        result=a1+a2
+        print(result)
+    elif operation=='-':
+        result=a1-a2
+        print(result)
+    elif operation=='*':
+        result=a1*a2
+        print(result)
+    elif operation=='/':
+        if a2!=0:
+            operation=a1/a2
+        else:
+            raise ZeroDivisionError('Անթույլատրելի Գործողություն  ')
+except ZeroDivisionError as n:
+    print('Թիվը չի կարելի բաժանել 0-ի',n)
