@@ -1,0 +1,10 @@
+def tab(val_1):
+    result = 0
+    for i in range(1,9):
+        i=i+1
+        result=i*val_1
+        print (result)
+    return result
+value = input('Set The Value:  ')
+value_1 = int(value)
+val2=tab(value_1)
