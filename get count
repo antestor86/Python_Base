@@ -1,0 +1,11 @@
+def get_count(string,sybhol):
+  cnt = 0
+  for i in string:
+    if i == sybhol:
+       cnt += 1
+  return cnt
+def get_len(string):
+  cnt = 0
+  for i in string:
+    cnt +=1
+  return cnt
