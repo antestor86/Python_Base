@@ -1,0 +1,11 @@
+"""Փոփոխականների վերափոխում 1 փոփոխականով"""
+a=2
+b=5
+tmp=0
+print('a={}'.format(a))
+print('b={}'.format(b))
+tmp=a
+a=b
+b=tmp
+print('a={}'.format(a))
+print('b={}'.format(b))
