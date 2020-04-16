@@ -1,0 +1,33 @@
+def sum(value1,value2,value3):
+    result=0
+    operation = 0
+    summary=''
+    if value1>(value2+value3):
+        if value2>value3:
+             operation=value2
+        else:
+             operation=value3
+        result=value1
+    if value2>(value1+value3):
+        if value1>value3:
+            operation=value1
+        else:
+            operation=value3
+        result=value2
+    if value3>(value1+value2):
+        if value1>value3:
+            operation=value1
+        else:
+            operation=value3
+        result=value3
+#return print(str(result)+'   '+str(operation))
+    summary=str(result)+'Ավելի Մեծ է'+'  '+str(operation)
+    return print(summary)
+
+var1=input('Նշեք Առաջին Թիվը։  ')
+var2=input('Նշեք Երկրորդ թիվը։ ')
+var3=input('Նշեք երրորդ թիվը։ ')
+x=int(var1)
+y=int(var2)
+z=int(var3)
+answer=sum(x,y,z)
