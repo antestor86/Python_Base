@@ -1,0 +1,74 @@
+from tkinter import *
+from tkinter import messagebox
+
+color=''
+message=["#10CA22","#0D0DC0","#FFF700","#FF0022","#000000","#FF8000"]
+def show_message(color):
+    #messagebox.showinfo("Title",color)
+    if color=='green':
+        messagebox.showinfo("Color","#10CA22")
+    elif color=='blue':
+        messagebox.showinfo("Color","#0D0DC0")
+    elif color=='yellow':
+        messagebox.showinfo("Color","#FFF700")
+    elif color=='red':
+        messagebox.showinfo("Color","#FF0022")
+    elif color=='black':
+        messagebox.showinfo("Color","#FF0022")
+
+
+
+
+
+
+
+
+
+    #if bg == "#10CA22":
+        #messagebox.showinfo("Title", message[0])  # Green
+    #elif bg == "#0D0DC0":
+        #messagebox.showinfo("Title", message[1])  # Blue
+    #elif bg == "#FFF700":
+        #messagebox.showinfo("Title", message[2])  # Yellow
+    #elif bg == "#FF0022":
+        #messagebox.showinfo("Title", message[3])  # Red
+    #elif bg == "#000000":
+        #messagebox.showinfo("Title", message[4])  # Black
+    #elif bg == "#FF8000":
+        #messagebox.showinfo("Title", message[4])  # Orange
+
+root=Tk()
+root.title('Գույներ')
+root.geometry("300x250")
+
+
+
+#Green Button
+button_green=Button(text="Կանաչ",bg=message[0],fg="#FFFFFF",width=50,height=2,command=show_message("green"))
+button_green.place(x=1,y=3,relx=.5,rely=.9,anchor="c")
+
+#Blue Button
+button_blue=Button(text="Կապույտ",bg=message[1],fg="#FFFFFF",width=50,height=2,command=show_message("blue"))
+button_blue.place(x=1,y=3,relx=.5,rely=.75,anchor="c")
+
+
+#Yellow Button
+button_yellow=Button(text="Դեղին",bg=message[2],fg="#000000",width=50,height=2,command=show_message)
+button_yellow.place(x=1,y=3,relx=.5,rely=.6,anchor="c")
+
+#Red Button
+button_red=Button(text="Կարմիր",bg=message[3],fg="#FFFFFF",width=50,height=2,command=show_message)
+button_red.place(x=1,y=3,relx=.5,rely=.45,anchor="c")
+
+#Black Button
+button_black=Button(text="Սև",bg=message[4],fg="#FFFFFF",width=50,height=2,command=show_message)
+button_black.place(x=1,y=3,relx=.5,rely=.30,anchor="c")
+
+#Orange Button
+button_orange=Button(text="Նարնջագույն",bg=message[5],fg="#FFFFFF",width=50,height=2,command=show_message)
+button_orange.place(x=1,y=3,relx=.5,rely=.15,anchor="c")
+
+
+
+
+root.mainloop()
