@@ -1,0 +1,8 @@
+"""CHECK IF STRING VALUE IS UPPER"""
+mytext='AsdKJASdsw'
+value=len(mytext)
+chekcer=False
+for i in range(value):
+    chekcer=mytext[i].islower()
+    if chekcer is False:
+        print(mytext[i])
