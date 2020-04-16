@@ -1,0 +1,42 @@
+class Salon:
+    cars = ['1-BMW--X5--2005թ-- գինը---6000$',
+            '2-BMW--i530--2003թ--գինը---3500$',
+            '3-Mercedes-Benz--C300--2003թ--գինը---5500$',
+            '4-Mercedes-Benz--E500--2013թ--գինը---15500$',
+            '5-Toyota--Corolla--2009--գինը-5500$']
+
+    payed_cars=[]
+    def change(self):
+        pay=input('Ընտրել Համարանիշը։ ')
+        if pay=='1':
+           del self.cars[0]
+           self.payed_cars.append(self.cars[0])
+        elif pay=='2':
+           del self.cars[1]
+           self.payed_cars.append(self.cars[1])
+
+        elif pay=='3':
+           del self.cars[2]
+           self.payed_cars.append(self.cars[2])
+        elif pay=='4':
+
+           del self.cars[3]
+           self.payed_cars.append(self.cars[3])
+        elif pay=='5':
+           del self.cars[4]
+           self.payed_cars.append(self.cars[4])
+        else:
+           print("Ձեր Կողմից Նշված Թիվը հասանելի չէ")
+
+        return self.cars,self.payed_cars
+
+    def print_info(self):
+         print(self.cars)
+         print('Գնված:',self.payed_cars)
+
+
+
+while True:
+   customer=Salon()
+   customer.change()
+   customer.print_info()
