@@ -1,0 +1,7 @@
+import random
+print(random.randint(100,500))
+print(random.choice(('John','Katy','Bob')))
+dict1={'a':'A','b':'B','c':'C'}
+list1=['a','b']
+print(random.choice(list1))
+print(random.sample(range(10,50),10))
