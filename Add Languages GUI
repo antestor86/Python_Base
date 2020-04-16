@@ -1,0 +1,32 @@
+from tkinter import *
+
+#Delet Selected Element
+def delete():
+  selection=language_listbox.curselection()
+  language_listbox.delete(selection[0])
+
+def add():
+  new_language=language_entry.get()
+  language_listbox.insert(0,new_language)
+root=Tk()
+root.title("test")
+root.geometry("500x400")
+
+#Add Text Entry and add Button
+language_entry=Entry(width=40)
+language_entry.grid(row=0,column=0,padx=6,pady=6)
+add_button=Button(text="Add",command=add)
+add_button.grid(row=0,column=1,padx=6,pady=6)
+
+#Create List
+language_listbox=Listbox()
+language_listbox.grid(row=1,column=0,columnspan=2,sticky=W+E,padx=5,pady=5)
+
+#Add Elements To list
+language_listbox.insert(END,"Python")
+language_listbox.insert(END,"Java")
+
+delete_button=Button(text="delete",command=delete)
+delete_button.grid(row=2,column=1,padx=5,pady=6)
+
+root.mainloop()
