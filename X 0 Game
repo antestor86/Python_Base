@@ -1,0 +1,63 @@
+import random
+
+X='X'
+O='O'
+EMPTY=''
+COUNT=9
+
+
+def addboard():
+    """
+    Տվյալ Մեթոդը Պատրաստում Տախտակը 9 վանդակից
+    :return:board
+    """
+    board=[]
+    for i in range(COUNT):
+        board.append(EMPTY)
+    return board
+
+
+def write_board(board):
+    """
+    ՏՎՅԱԼ ՄԵԹՈԴԸ ՏՊՈՒՄ Է ԴԱՏԱՐԿ ԱՂՅՈՒՍԱԿԸ
+
+    :param board:
+    :return:
+    """
+    print("\n\t",board[0],"!",board[1],"!",board[2])
+    print("\t","------")
+    print("\n\t", board[3], "!", board[4], "!", board[5])
+    print("\t", "------")
+    print("\n\t", board[6], "!", board[7], "!", board[8])
+
+# print(write_board(addboard()))
+
+def pieces():
+    """
+    Տվյալ մեթոդը որոշում է թե ով պետքա խաղա x-ով և ով y-ով:
+    :return: X և Y-ի արժեքները
+    """
+    ans=None
+    while ans not in('y','n'):
+        ans=input("Ցանկանում եք սկսել առաջինը?(y/n):\n")
+    if ans=='y':
+        human=X
+        computer=O
+    else:
+         human=O
+         computer=X
+    return human,computer
+
+def human_step(board):
+    """
+    Տվյալ Մեթոդով ստանում ենք քայլը
+    :param board:
+    :return: դաշտ
+    """
+    step=None
+    moves=legal_moves(board)
+    while step not in moves:
+        step=int(input('ձեր քայլը [0-8] դաշտերում:\n'))
+        if step not in moves:
+            print("Տվյալ Դաշտը Արդեն Զբաղված է")
+    return step
