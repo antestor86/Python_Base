@@ -1,0 +1,4 @@
+zoo = ['lion','kangoro','elephant','monkey']
+other_zoo =[zoo[0],'bear',zoo[1]]
+other_zoo.extend(zoo[2:4])
+print(other_zoo)
