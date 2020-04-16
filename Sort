@@ -1,0 +1,11 @@
+def sort_list(text_value):
+   s=None
+   list1=[]
+   for i in text_value:
+    s=ord(i)
+    list1.append(i)
+   list1.sort()
+   return list1
+
+text="Hello My Name is Joe"
+print(sort_list(text))
