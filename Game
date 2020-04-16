@@ -1,0 +1,40 @@
+import random
+# Set Players Names
+PlayerOne = input('Set Player1 Name')
+PlayerTwo = input('Set Player2 Name')
+#Create 2 users score
+User1_Score = 0
+User2_Score = 0
+#Create two dices lists
+dice_one = [1,2,3,4,5,6]
+dice_two = [1,2,3,4,5,6]
+
+#Create Function With Play Dices and return result
+def playGame():
+  for i in range(5):
+    random.shuffle(dice_one)
+
+    random.shuffle(dice_two)
+
+    firstNumber = random.choice(dice_one)
+    print(firstNumber)
+    second_number = random.choice(dice_two)
+    print(second_number)
+
+  return firstNumber + second_number
+
+#Play the game 10 attempts
+#First change who must start game first
+for i in range(3):
+  user1Number = random.randint(0,100)
+  user2Number = random.randint(0,100)
+  if user1Number > user2Number:
+     print("First Play User1")
+     User1_Score = playGame()
+     print(User1_Score)
+     User2_Score = playGame()
+     print(User2_Score)
+     if User1_Score > User2_Score:
+        print(f"WINS USER {PlayerOne}")
+     else:
+        print(f"WINS USER {PlayerTwo}")
