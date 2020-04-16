@@ -1,0 +1,27 @@
+class Editor:
+    def view_document(self):
+        print("Read Document")
+    def edit_document(self):
+        print("You Can NOT Edit on Free Version")
+
+class ProEditor(Editor):
+    def edit_document(self):
+        print("Set Licenze Key Number")
+        print('You Ara add Correct Key')
+        print('Welcome')
+        for i in range(10):
+            print('* '*i)
+
+
+document=None
+attempt=3
+while attempt > 0:
+   key=input("Set Key:")
+   attempt-=1
+   if key=="dQwm62kc":
+       document=ProEditor()
+       document.edit_document()
+   else:
+       document=Editor()
+       document.view_document()
+       document.edit_document()
