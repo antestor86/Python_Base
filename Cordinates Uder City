@@ -1,0 +1,53 @@
+import math
+cities = {'Moscow':(550,370),
+		  'London':(510,510),
+		  'Paris':(480,480)
+		  }
+
+while True:
+   get_point1 = input('Write the name of city : Moscow London Or Paris >> ')
+   get_point2 = input('Write the name of city : Moscow London Or Paris >> ')
+   cordinates_1 = []
+   cordinates_2 = []
+   distance = 0
+   distances={}
+
+   if get_point1 == 'Moscow' and get_point2 == 'London':
+     cordinates_1 = cities.get(get_point1)
+     cordinates_2 = cities.get(get_point2)
+     distance = math.sqrt((cordinates_1[0]+cordinates_2[0])**2+(cordinates_1[1]+cordinates_2[1])**2)
+     print(f'The Distance From :Moscow --> London: is {distance} ')
+
+
+   elif get_point1 == 'Moscow' and get_point2 == 'Paris':
+     cordinates_1 = cities.get(get_point1)
+     cordinates_2 = cities.get(get_point2)
+     distance = math.sqrt((cordinates_1[0]+cordinates_2[0])**2+(cordinates_1[1]+cordinates_2[1])**2)
+     print(f'The Distance From :Moscow --> Paris: is {distance} ')
+
+   elif get_point1 == 'London' and get_point2 == 'Moscow':
+     cordinates_1 = cities.get(get_point1)
+     cordinates_2 = cities.get(get_point2)
+     distance = math.sqrt((cordinates_1[0]+cordinates_2[0])**2+(cordinates_1[1]+cordinates_2[1])**2)
+     print(f'The Distance From :London --> Moscow: is {distance} ')
+
+
+   elif get_point1 == 'London' and get_point2 == 'Paris':
+     cordinates_1 = cities.get(get_point1)
+     cordinates_2 = cities.get(get_point2)
+     distance = math.sqrt((cordinates_1[0]+cordinates_2[0])**2+(cordinates_1[1]+cordinates_2[1])**2)
+     print(f'The Distance From :London --> Paris: is {distance} ')
+
+   elif get_point1 == 'Paris' and get_point2 == 'Moscow':
+     cordinates_1 = cities.get(get_point1)
+     cordinates_2 = cities.get(get_point2)
+     distance = math.sqrt((cordinates_1[0]+cordinates_2[0])**2+(cordinates_1[1]+cordinates_2[1])**2)
+     print(f'The Distance From :Paris --> Moscow: is {distance} ')
+
+   elif get_point1 == 'Paris' and get_point2 == 'London':
+     cordinates_1 = cities.get(get_point1)
+     cordinates_2 = cities.get(get_point2)
+     distance = math.sqrt((cordinates_1[0]+cordinates_2[0])**2+(cordinates_1[1]+cordinates_2[1])**2)
+     print(f'The Distance From :Paris --> London: is {distance} ')
+   else:
+     print('You Are Write Wrog Names of Cities')
