@@ -1,0 +1,14 @@
+stroke="Hello My name is Jaxson"
+print(stroke[3])
+print(stroke[-2])
+print(stroke[0:5])
+print(len(stroke))
+print(stroke[0:21])
+stroke_length=len(stroke)
+print("Stroke Length is {}".format(stroke_length))
+print(stroke[0:21])
+
+for index in range(stroke_length):
+   if index%2==0:
+        print(index)
+        print(stroke[index])
