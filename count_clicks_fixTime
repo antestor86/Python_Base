@@ -1,0 +1,28 @@
+from tkinter import *
+import time
+root = Tk()
+root.geometry('300x200+1000+300')
+root.title('Shoping Time')
+root.iconbitmap('Fasticon-Shop-Cart-Shop-cart.ico')
+root.config(bg = 'black')
+
+def check_time():
+  btn_time['text'] = time.strftime('%H:%M:%S')
+
+clicks = 0
+def counter():
+  global clicks
+  clicks += 1
+  btn_count['text'] = f'Count  {clicks}'
+
+btn_time = Button(root,text = 'Ստուգել Ժամը',command = check_time)
+btn_time.configure(width = 30 ,height = 5)
+btn_time['font'] = ('Arial',10)
+btn_time.pack()
+
+btn_count = Button(root,text = 'Counts 0',command = counter)
+btn_count.configure(width = 30 ,height = 5)
+btn_count['font'] = ('Arial',10)
+btn_count.pack()
+
+root.mainloop()
