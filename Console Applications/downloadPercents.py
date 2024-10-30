@@ -11,3 +11,6 @@ for file in range(connection,file_size):
         if downloaded >= file_size:
             print(seconds, 'sec', '.Downloaded', file_size, 'from', file_size, 'MB','(',100,'%)')
             break
+
+
+#
