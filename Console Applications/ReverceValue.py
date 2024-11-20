@@ -20,13 +20,19 @@ def reverceInt(value):
             res += item
             counter += 1
 
+# Последнюю цифру первого числа переносим во второе
     digit = int(res) % 10
     res2 = digit
+# Избавляемся от последней цифры первого числа
     res = int(res) // 10
     while res > 0:
+       # находим остаток - последнюю цифру
         digit = res % 10
+       # делим нацело - удаляем последнюю цифру
         res = res // 10
+       # увеличиваем разрядность второго числа
         res2 = res2 *10
+       # добавляем очередную цифру
         res2 = res2 + digit
     print("Program Is Finished ! ",res2)
 
